@@ -52,7 +52,7 @@ int main() {
 	ifstream student_file("grades.txt");
 
 	// 학생 이름과 모든 점수를 읽어 저장하기
-	while (read(student_file, record)) {
+	while (record.read(student_file)) { // fix
 		maxlen = max(maxlen, record.getName().size());
 		students.push_back(record);
 	}
